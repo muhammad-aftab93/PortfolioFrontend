@@ -28,6 +28,7 @@ jobs:
 
       - name: Remove node_modules before uploading
         run: rm -rf node_modules
+        if: ${{ success() }}  # Only run if tests and build were successful
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
