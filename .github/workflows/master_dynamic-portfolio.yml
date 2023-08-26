@@ -1,3 +1,6 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
 name: Build and deploy Node.js app to Azure Web App - dynamic-portfolio
 
 on:
@@ -18,16 +21,11 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: Install npm dependencies
-        run: npm install
-
-      - name: npm run build and test
+      - name: npm install, build, and test
         run: |
+          npm install
           npm run build --if-present
           npm run test --if-present
-
-      - name: Remove node_modules before uploading
-        run: rm -rf node_modules
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -48,14 +46,11 @@ jobs:
         with:
           name: node-app
 
-      - name: Restore npm dependencies
-        run: npm install
-
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'dynamic-portfolio'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F441C110875D47D9BF14BA3FB7E4D97A }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1886EAAEC45840CA9B99B77BE25CB285 }}
           package: .
