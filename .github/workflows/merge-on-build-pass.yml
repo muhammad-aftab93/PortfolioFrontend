@@ -3,7 +3,7 @@ name: Merge on Build Pass
 on:
   push:
     branches:
-      - main  # The branch where the pull request will be merged
+      - master  # The branch where the pull request will be merged
 
 jobs:
   
