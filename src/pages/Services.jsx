@@ -1,5 +1,5 @@
-import React, {useEffect} from "react";
-import Layout2 from "../components/Layout/Layout2";
+import {useEffect} from "react";
+import Layout from "../components/Layout/Layout";
 import SectionHeading from "../components/Items/SectionHeading";
 import ServicesSection from "../components/Sections/Services";
 import PricingTable from "../components/Sections/PricingTable";
@@ -9,7 +9,7 @@ function Services() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Layout2>
+    <Layout>
       <section className="shadow-blue white-bg padding mt-0">
         <SectionHeading title="Services" />
         <ServicesSection />
@@ -18,7 +18,7 @@ function Services() {
         <SectionHeading title="Pricing table" />
         <PricingTable />
       </section>
-    </Layout2>
+    </Layout>
   );
 }
 

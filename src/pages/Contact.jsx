@@ -1,5 +1,5 @@
-import React, {useEffect} from "react";
-import Layout2 from "../components/Layout/Layout2";
+import {useEffect} from "react";
+import Layout from "../components/Layout/Layout";
 import SectionHeading from "../components/Items/SectionHeading";
 import ContactSection from "../components/Sections/Contact";
 
@@ -8,12 +8,12 @@ function Contact() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Layout2>
+    <Layout>
       <section className="shadow-blue white-bg padding mt-0">
         <SectionHeading title="Get in touch" />
         <ContactSection />
       </section>
-    </Layout2>
+    </Layout>
   );
 }
 

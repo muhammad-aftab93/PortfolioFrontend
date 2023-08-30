@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { Link, useRouteMatch } from "react-router-dom";
 import {
@@ -6,12 +6,12 @@ import {
   FaTwitter,
   FaInstagram,
   FaYoutube,
-  FaDribbble,
+  FaDribbble
 } from "react-icons/fa";
 
 const headerData = {
-  name: "Bako Doe",
-  designation: "Web Developer",
+  name: "M. Aftab",
+  designation: "Senior Software Engineer (Fullstack Developer)",
   imageThumb: "/images/logo.png",
   social: {
     facebook: "https://facebook.com",
