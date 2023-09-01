@@ -173,24 +173,6 @@ function Header({ toggleHeader, toggleHandler }) {
                 {currentPath === "/" ? (
                   <ScrollLink
                     activeClass="active"
-                    to="section-blogs"
-                    spy={true}
-                    smooth={true}
-                    offset={-50}
-                    duration={500}
-                  >
-                    <i className="icon-pencil"></i>Blog
-                  </ScrollLink>
-                ) : (
-                  <Link to="/">
-                    <i className="icon-pencil"></i>Blog
-                  </Link>
-                )}
-              </li>
-              <li>
-                {currentPath === "/" ? (
-                  <ScrollLink
-                    activeClass="active"
                     to="section-contact"
                     spy={true}
                     smooth={true}
@@ -248,7 +230,7 @@ function Header({ toggleHeader, toggleHandler }) {
             </ul>
 
             <span className="copyright">
-              &copy; {new Date().getFullYear()} Bako Template
+              &copy; {new Date().getFullYear()} Muhammad Aftab Hameed
             </span>
           </div>
         </div>

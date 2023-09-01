@@ -1,10 +1,9 @@
-import React from "react";
 import { Link as ScrollLink } from "react-scroll";
 
 const aboutData = {
   cvpath: "media/empty.pdf",
   image: "images/about.png",
-  name: "Bako Doe",
+  name: "M. Aftab",
   location: "London, UK",
   birthday: "14 August, 1990",
   email: "hello@bako.com",

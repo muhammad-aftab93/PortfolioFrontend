@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Element } from "react-scroll";
 import Layout from "../components/Layout/Layout";
 import About from "../components/Sections/About";
@@ -11,8 +11,6 @@ import Funfacts from "../components/Sections/Funfacts";
 import Services from "../components/Sections/Services";
 import Experiences from "../components/Sections/Experiences";
 import Portfolios from "../components/Sections/Portfolios";
-import PricingTable from "../components/Sections/PricingTable";
-import Blogs from "../components/Sections/Blogs";
 import Contact from "../components/Sections/Contact";
 
 function Homepage() {
@@ -64,13 +62,6 @@ function Homepage() {
         </section>
       </Element>
 
-      <Element name="section-pricing">
-        <section className="shadow-blue white-bg padding">
-          <SectionHeading title="Pricing table" />
-          <PricingTable />
-        </section>
-      </Element>
-
       <Element name="section-testimonials">
         <section className="shadow-blue white-bg padding">
           <SectionHeading title="Testimonials" />
@@ -80,13 +71,6 @@ function Homepage() {
 
       <Element name="section-clients">
         <Clients />
-      </Element>
-
-      <Element name="section-blogs">
-        <section className="shadow-blue white-bg padding">
-          <SectionHeading title="Recent posts" />
-          <Blogs />
-        </section>
       </Element>
 
       <Element name="section-contact">

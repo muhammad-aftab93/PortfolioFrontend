@@ -2,18 +2,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./App.scss";
-
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Multipage from "./pages/Multipage";
-import Bloglist from "./pages/Bloglist";
-import BlogDetails from "./pages/BlogDetails";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Resume from "./pages/Resume";
 import Works from "./pages/Works";
 import Contact from "./pages/Contact";
-import Demopage from "./pages/Demopage";
 import WorkDetails from "./pages/WorkDetails";
 
 function App() {
@@ -22,12 +18,6 @@ function App() {
       <Switch>
         <Route path="/" component={Homepage} exact />
         <Route path="/multipage" component={Multipage} exact />
-        <Route path="/blogs" component={Bloglist} exact />
-        <Route path="/bloglist" component={Bloglist} exact />
-        <Route path="/blogs/:id/:title" component={BlogDetails} />
-        <Route path="/blog-details/:id/:title" component={BlogDetails} />
-
-        {/* For Multipage */}
         <Route path="/multipage" component={Multipage} exact />
         <Route path="/about" component={About} exact />
         <Route path="/services" component={Services} exact />
@@ -37,8 +27,6 @@ function App() {
         <Route path="/work-details/:id/:title" component={WorkDetails} />
         <Route path="/contact" component={Contact} exact />
 
-        {/* Demo Purpose Only */}
-        <Route path="/demopage" component={Demopage} exact />
       </Switch>
     </BrowserRouter>
   );
