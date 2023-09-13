@@ -7,9 +7,9 @@ import Clients from "../components/Sections/Clients";
 import Herosection from "../components/Sections/Herosection";
 import SectionHeading from "../components/Items/SectionHeading";
 import Skills from "../components/Sections/Skills";
-import Funfacts from "../components/Sections/Funfacts";
 import Services from "../components/Sections/Services";
 import Experiences from "../components/Sections/Experiences";
+import Educations from "../components/Sections/Educations";
 import Portfolios from "../components/Sections/Portfolios";
 import Contact from "../components/Sections/Contact";
 
@@ -37,10 +37,6 @@ function Homepage() {
         </section>
       </Element>
 
-      <Element name="section-funfacts">
-        <Funfacts />
-      </Element>
-
       <Element name="section-services">
         <section className="shadow-blue white-bg padding">
           <SectionHeading title="Services" />
@@ -54,6 +50,13 @@ function Homepage() {
           <Experiences />
         </section>
       </Element>
+
+    <Element name="section-education">
+        <section className="shadow-blue white-bg padding">
+            <SectionHeading title="Education" />
+            <Educations />
+        </section>
+    </Element>
 
       <Element name="section-portfolios">
         <section className="shadow-blue white-bg padding">

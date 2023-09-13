@@ -3,7 +3,6 @@ import Layout from "../components/Layout/Layout";
 import SectionHeading from "../components/Items/SectionHeading";
 import AboutSection from "../components/Sections/About";
 import Skills from "../components/Sections/Skills";
-import Funfacts from "../components/Sections/Funfacts";
 import Testimonials from "../components/Sections/Testimonials";
 import Clients from "../components/Sections/Clients";
 
@@ -22,8 +21,6 @@ function About() {
         <SectionHeading title="My skills" />
         <Skills />
       </section>
-
-      <Funfacts />
 
       <section className="shadow-blue white-bg padding">
         <SectionHeading title="Testimonials" />
