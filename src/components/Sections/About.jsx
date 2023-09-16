@@ -1,17 +1,38 @@
 import { Link as ScrollLink } from "react-scroll";
-
-const aboutData = {
-  cvpath: "media/empty.pdf",
-  image: "images/about.png",
-  name: "M. Aftab",
-  location: "London, UK",
-  birthday: "14 August, 1990",
-  email: "hello@bako.com",
-  aboutMe:
-    "I am Bako Doe, web developer from London, United Kingdom. I have rich experience in web site design and building and customization, also I am good at wordpress.",
-};
+import { useState, useEffect } from 'react';
+import { PersonalDetailsEndpoint } from '../../constants/endpoints';
 
 function About() {
+
+  const [aboutData, setAboutData] = useState({
+    cvpath: 'media/empty.pdf',
+    image: 'images/about.png',
+    name: '',
+    location: '',
+    phoneNumber: '',
+    email: '',
+    personalStatement: '',
+  });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    fetch(PersonalDetailsEndpoint)
+    .then((response) => { return response.json(); })
+    .then(result => {
+      setAboutData({
+        cvpath: 'media/empty.pdf',
+        image: result.picture,
+        name: result.firstName + ' ' + result.middleName,
+        location: result.location,
+        phoneNumber: result.phoneNumber,
+        email: result.email,
+        personalStatement: result.personalStatement,
+      });
+    })
+    .catch(error => alert(error.message));
+  }, []);
+
   return (
     <div className="row">
       <div className="col-md-3">
@@ -19,14 +40,14 @@ function About() {
       </div>
       <div className="col-md-9">
         <h2 className="mt-4 mt-md-0 mb-4">Hello,</h2>
-        <p className="mb-0">{aboutData.aboutMe}</p>
+        <p className="mb-0">{aboutData.personalStatement}</p>
         <div className="row my-4">
           <div className="col-md-6">
             <p className="mb-2">
               Name: <span className="text-dark">{aboutData.name}</span>
             </p>
             <p className="mb-0">
-              Birthday: <span className="text-dark">{aboutData.birthday}</span>
+              Phone Number: <span className="text-dark">{aboutData.phoneNumber}</span>
             </p>
           </div>
           <div className="col-md-6 mt-2 mt-md-0 mt-sm-2">
