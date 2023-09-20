@@ -12,6 +12,7 @@ import Experiences from "../components/Sections/Experiences";
 import Educations from "../components/Sections/Educations";
 import Portfolios from "../components/Sections/Portfolios";
 import Contact from "../components/Sections/Contact";
+import Certifications from "../components/Sections/Certifications";
 
 function Homepage() {
   useEffect(() => {
@@ -55,6 +56,13 @@ function Homepage() {
         <section className="shadow-blue white-bg padding">
             <SectionHeading title="Education" />
             <Educations />
+        </section>
+    </Element>
+
+    <Element name="section-certifications">
+        <section className="shadow-blue white-bg padding">
+            <SectionHeading title="Certifications" />
+            <Certifications />
         </section>
     </Element>
 
