@@ -1,5 +1,3 @@
-import React from "react";
-import Service from "../Items/Service";
 import Certification from "../Items/Certification";
 
 const certificationData = [
