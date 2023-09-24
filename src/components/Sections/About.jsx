@@ -12,7 +12,7 @@ function About() {
     window.scrollTo(0, 0);
     dispatch(fetchPersonalDetails());
 
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="row">
